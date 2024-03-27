@@ -281,7 +281,6 @@
 .top_exp {
   border-radius: 15px;
   width: min(90%, 55em);
-  padding: 0em 3em 0 3em;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -496,7 +495,6 @@
   .top_exp {
     border-radius: 15px;
     width: min(90%, 55em);
-    padding: 3em 0em 0em 0em;
     display: flex;
     align-items: center;
     flex-direction: column;
