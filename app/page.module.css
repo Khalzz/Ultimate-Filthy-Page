@@ -40,7 +40,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin: 5em 0;
+  padding: 5em 0;
 }
 
 .centered_column_proj {
@@ -209,7 +209,7 @@
 
 .project_paragraph {
   width: 100%;
-  font-size: 0.9em;
+  font-size: 0.8em;
 }
 
 .tech_list {
@@ -463,6 +463,15 @@
     margin-bottom: 0.3em;
   }
   
+  .centered_column_exp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10em 0;
+  }
+  
+
   .centered_title {
     display: flex;
     align-items: center;
