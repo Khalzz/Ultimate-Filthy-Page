@@ -35,6 +35,14 @@
   flex-direction: column;
 }
 
+.centered_column_exp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 1em 0;
+}
+
 .centered_column_proj {
   display: flex;
   align-items: center;
@@ -133,6 +141,15 @@
   color: #DC486A;
 }
 
+.exp_title_background {
+  background-color: #15161C;
+  margin-bottom: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 0 1em;
+}
 
 .projects_title_background {
   background-color: #15161C;

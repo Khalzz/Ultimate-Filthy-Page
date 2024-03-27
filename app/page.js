@@ -54,8 +54,8 @@ export default async function Home() {
         </div>
         <Link href="/projects"><button className={roboto_mono.className + " " + styles.button_more}>More</button></Link>
       </section>
-      <section className={styles.centered_column_first}>
-      <div className={styles.projects_title_background}><h2 className={styles.projects_title}>Profesional Experience</h2></div>
+      <section className={styles.centered_column_exp}>
+      <div className={styles.exp_title_background}><h2 className={styles.projects_title}>Profesional Experience</h2></div>
         <div className={styles.exp_container}>
           <div className={styles.top_exp}>
             {await loadExp(notion)}
