@@ -40,10 +40,8 @@ export default async function Home() {
           <h2 className={styles.about_title_mobile}>About me</h2>
 
           <div className={styles.pink_bordered}>
-            <div>
               <p className={roboto_mono.className}>
                 I'm <b className={styles.pink_text}>Rodrigo Seguel</b>, a <b className={styles.pink_text}>Software Developer</b> with a love for both web and game development. Constantly exploring new technologies and pushing myself to learn more.              </p>
-            </div>
           </div>
         </div>
       </section>

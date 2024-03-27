@@ -91,7 +91,7 @@
   font-size: 1em;
   border: 1px solid #DC486A;
   width: min(60vw, 50em);
-  padding: 2em 0 2em 3em;
+  padding: 2em 0 2em 4em;
   height: auto;
   border-radius: 15px;
 }
@@ -429,6 +429,7 @@
   left: 0;
 }
 
+
 @media (max-width: 900px) {
   .exp_background {
     border-radius: 15px;
@@ -446,7 +447,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     font-weight: 400;
     font-size: 1em;
     border: 0px solid #DC486A;
