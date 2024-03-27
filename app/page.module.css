@@ -52,14 +52,14 @@
 }
 
 .title {
-  font-size: min(5vw, 110px);
+  font-size: min(6vh, 110px);
   font-weight: 400;
   margin-bottom: -0.3em;
 
 }
 
 .subtitle {
-  font-size: min(2.5vw, 50px);
+  font-size: min(3vh, 50px);
   font-weight: 400;
   text-align: center;
   transition: 0.4s;
