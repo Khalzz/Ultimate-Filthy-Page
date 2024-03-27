@@ -13,7 +13,20 @@
   justify-content: center;
 }
 
+.centered_first {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
 
+.centered_column_first {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
 
 .centered_column {
   display: flex;
@@ -251,7 +264,7 @@
 .top_exp {
   border-radius: 15px;
   width: min(90%, 55em);
-  padding: 3em 3em 2em 3em;
+  padding: 0em 3em 0 3em;
   display: flex;
   align-items: center;
   flex-direction: column;

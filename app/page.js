@@ -27,7 +27,7 @@ export default async function Home() {
 
   return (
     <main className={styles.background}>
-      <section className={styles.centered}>
+      <section className={styles.centered_first}>
         <div className={styles.centered_column}>
           <h1 className={styles.title}>Rodrigo Seguel</h1>
           <h2 className={styles.subtitle}><Subtitle/></h2>
@@ -47,14 +47,14 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section className={styles.centered_column}>
+      <section className={styles.centered_column_first}>
         <div className={styles.projects_title_background}><h2 className={styles.projects_title}>Projects</h2></div>
         <div className={styles.projects_background}>
           {await loadProj(notion)}
         </div>
         <Link href="/projects"><button className={roboto_mono.className + " " + styles.button_more}>More</button></Link>
       </section>
-      <section className={styles.centered_column}>
+      <section className={styles.centered_column_first}>
       <div className={styles.projects_title_background}><h2 className={styles.projects_title}>Profesional Experience</h2></div>
         <div className={styles.exp_container}>
           <div className={styles.top_exp}>
