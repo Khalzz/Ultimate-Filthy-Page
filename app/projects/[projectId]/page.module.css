@@ -1,0 +1,128 @@
+.background {
+  background-image: url('/Background/concrete-wall.png');
+  background-repeat:repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #1E2027;
+  background-size: 20vw;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered_column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 400;	
+  margin-bottom: 1vw;	
+  color: #DBDCE4;	
+  font-size: min(3em);
+
+}
+
+.description {
+  transition: 1s;
+  font-weight: 300;
+  width: min(90%, 60em);
+  font-size: 1em;	
+  text-align: center;	
+  color: #DBDCE4;
+  margin-bottom: 3em;
+}
+
+.back {
+  position: absolute
+}
+
+.proj_img {
+  /*height: 25%;*/
+  width: 100%;
+  height: auto;
+  border: 1.5px solid #DC486A;
+  border-radius: 20px;
+  box-shadow:  0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.1s;
+}
+
+.instructions {
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  font-weight: 400;
+  text-align: center;
+  width: 85vw;	
+  font-size: 0.8em;	
+  color: #748492;
+}
+
+.proj_img:active {
+  opacity: 0.5;
+}
+
+.github_btn {
+  margin: 0 auto;
+  margin-top: 5em;
+  border: 1px solid #DC486A;
+  padding: 1em 2em;
+  border-radius: 100px;
+  color: #DC486A;
+  font-weight: 400;
+  width: min(90%, 20em);
+  font-size: 0.8em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 0.3s;
+}
+
+.github_btn:hover {
+  border: 1px solid #DC486A;
+  background-color: #DC486A;
+  padding: 1em 2em;
+  border-radius: 100px;
+  color: #1E2027;
+}
+
+.github_btn:active {
+  scale: 0.9;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.proj_link {
+  width: min(90%, 20em);
+  height: auto;
+}
+
+.tech_list {
+  display: flex;
+  flex-direction: row;
+}
+
+.tech {
+  border-radius: 15px;
+  margin-right: 0.3em;
+  margin-left: 0.3em;
+  height: 2em;
+  padding: 0 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #DC486A;
+  color: #1E2027;
+  font-size: 0.8em;
+}
+
+.dev_with {
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 0.5em;
+}

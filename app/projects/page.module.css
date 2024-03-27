@@ -1,0 +1,174 @@
+.background {
+  background-image: url('/Background/concrete-wall.png');
+  background-size: cover;
+  background-position: center;
+  background-color: #15161C;
+  overflow-y: auto;
+  background-size: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered_column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: min(5vw, 110px);
+  font-weight: 400;
+  margin-bottom: -0.3em;
+
+}
+
+.subtitle {
+  font-size: min(2.5vw, 50px);
+  font-weight: 400;
+  text-align: center;
+  transition: 0.4s;
+  color: #DC486A;
+}
+
+
+.projects_title_background {
+  background-color: #15161C;
+  margin-bottom: -1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 0 1em;
+}
+
+.projects_title {
+  margin-top: 0.5em;
+  font-size: min(2vw, 50px);
+  font-weight: 200;
+  transition: 0.4s;
+  color: #DC486A;
+}
+
+.projects_background {
+  border: 1px solid #DC486A;
+  border-radius: 15px;
+  width: min(40%, 60%);
+  padding: 3em 1em 2em 1em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2em
+}
+
+.project_background {
+  border-radius: 15px;
+  margin-bottom: 1em;
+  background-color: #1E2027;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dc486b00;
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  transition: 0.3s;
+  width: 90%;
+}
+
+.project_background:hover {
+  border: 1px solid #DC486A;
+  scale: 1.05;
+}
+
+.project_background:active {
+  border: 1px solid #DC486A;
+  scale: 1;
+}
+
+.project_title {
+  margin-bottom: 0.5em;
+  font-size: 1.1em;
+}
+
+.project_paragraph {
+  width: 100%;
+  font-size: 0.9em;
+}
+
+.tech_list {
+  margin-top: 1.3em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.tech {
+  border-radius: 15px;
+  margin-right: 1em;
+  height: 2em;
+  padding: 0 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #DC486A;
+  color: #1E2027;
+  font-size: 0.8em;
+}
+
+.img_gif {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 50;
+}
+
+.over {
+  background-color: #1E2027;
+  z-index: 100;
+  width: 100%;
+  padding: 1.5em;
+  transition: 0.3s;
+}
+
+.over:hover {
+  background-color: #000000b4;
+  z-index: 100;
+}
+
+.project_paragraph_bold {
+  margin: 0 0;
+  margin-top: 0.7em;
+  font-weight: 400;
+}
+
+.footer {
+  background-color:#1E2027;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer_text {
+  text-align: center;
+  margin: 2em;
+  font-size: 0.9vw;
+  width: 22vw;
+  justify-self:end; 
+}
+
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
