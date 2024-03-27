@@ -430,6 +430,18 @@
 }
 
 @media (max-width: 900px) {
+  .exp_background {
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #dc486b00;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    transition: 0.3s;
+    padding: 1em;
+  }
+
   .pink_bordered {
     display: flex;
     align-items: center;
