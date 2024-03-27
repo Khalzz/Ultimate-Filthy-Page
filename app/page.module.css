@@ -13,11 +13,22 @@
   justify-content: center;
 }
 
+
+
 .centered_column {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 100vh;
+}
+
+.centered_column_proj {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5em 0;
 }
 
 .title {
@@ -57,17 +68,48 @@
   justify-content: center;
   flex-direction: row;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 1em;
   border: 1px solid #DC486A;
-  width: min(90vw, 60%);
-  padding: 2em 0;
-  height: 15vh;
-  width: 60vw;
+  width: min(60vw, 50em);
+  padding: 2em 0 2em 3em;
+  height: auto;
   border-radius: 15px;
 }
 
+.about_title_desktop {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 200;
+  transition: 0.4s;
+  color: #DC486A;
+  height: 2em;
+  margin-bottom: -2em;
+}
+
+.about_title_mobile {
+  display: none;
+}
+
+.centered_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 50vh;
+}
+
+.inner_centered_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3em;
+}
+
 .logo_about {
-  margin-left: -3em;
+  z-index: 100;
+  margin-right: -3em;
+  width: clamp(10em, 15em, 20em);
+  height: auto;
 }
 
 .pink_text {
@@ -78,6 +120,7 @@
 .link {
   color: #DC486A;
 }
+
 
 .projects_title_background {
   background-color: #15161C;
@@ -90,7 +133,7 @@
 }
 
 .projects_title {
-  font-size: min(2vw, 50px);
+  font-size: 2em;
   font-weight: 200;
   transition: 0.4s;
   color: #DC486A;
@@ -99,7 +142,7 @@
 .projects_background {
   border: 1px solid #DC486A;
   border-radius: 15px;
-  width: min(40%, 60%);
+  width: min(90%, 40em);
   padding: 3em 1em 2em 1em;
   display: flex;
   align-items: center;
@@ -208,7 +251,7 @@
 
 .top_exp {
   border-radius: 15px;
-  width: min(55%, 70%);
+  width: min(90%, 55em);
   padding: 3em 3em 2em 3em;
   display: flex;
   align-items: center;
@@ -262,7 +305,7 @@
 }
 
 .exp_divisor {
-  height: 1.5em;
+  height: 1em;
   width: 0.2em;
   background-color: #484B5E;
   margin: 1.2em 0;
@@ -344,8 +387,7 @@
 .footer_text {
   text-align: center;
   margin: 2em;
-  font-size: 0.9vw;
-  width: 22vw;
+  font-size: 0.9em;
   justify-self:end; 
 }
 
@@ -353,3 +395,83 @@
   align-self: flex-start;
 }
 
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@media (max-width: 900px) {
+  .pink_bordered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 1em;
+    border: 0px solid #DC486A;
+    border-top: 1px solid #DC486A;
+    text-align: center;
+    width: 75vw;
+    height: auto;
+    padding: 0 0;
+    margin: 0 0;
+    padding-top: 0.5em;
+  }
+  
+  .about_title_desktop {
+    display: none;
+  }
+
+  .about_title_mobile {
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 200;
+    transition: 0.4s;
+    color: #DC486A;
+    height: auto;
+    margin-top: 0.8em;
+    margin-bottom: 0.3em;
+  }
+  
+  .centered_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .inner_centered_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .logo_about {
+    z-index: 100;
+    width: clamp(10em, 15em, 20em);
+    margin: 0 0
+  }
+  
+  .pink_text {
+    color: #DC486A;
+  }
+  
+  .link {
+    color: #DC486A;
+  }
+  
+  .top_exp {
+    border-radius: 15px;
+    width: min(90%, 55em);
+    padding: 3em 0em 0em 0em;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color:#15161c;
+    z-index: 100;
+  }
+}

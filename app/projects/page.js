@@ -1,4 +1,4 @@
-import styles from "./page.module.css";
+import styles from "../page.module.css";
 import ProjectButton from "../components/project_button"
 import CustomFooter from "../components/footer"
 import { Client } from "@notionhq/client";
@@ -22,10 +22,9 @@ export default async function Home() {
     auth: process.env.NOTION_KEY
   })
 
-  
-
   return (
     <main className={styles.background}>
+      <div className={styles.centered_column_proj}>
         <Link href={`/`}>
             <Image
             src={"/icons/Back.svg"}
@@ -34,10 +33,11 @@ export default async function Home() {
             className={styles.back}
             />
         </Link>
-        <div className={styles.projects_title_background}><h2 className={styles.projects_title}>Projects</h2></div>
+        <div className={styles.exp_title_background}><h2 className={styles.projects_title}>Projects</h2></div>
         <div className={styles.projects_background}>
           {await loadProj(notion)}
         </div>
+      </div>
       <CustomFooter/>
     </main>
   );
@@ -64,7 +64,7 @@ const loadProj = async (notion) => {
     } catch (error) {
       projects.push(<>upsi</>)
     }
-  })
+  });
   return projects;
 }
 

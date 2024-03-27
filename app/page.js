@@ -25,8 +25,6 @@ export default async function Home() {
     auth: process.env.NOTION_KEY
   })
 
-  
-
   return (
     <main className={styles.background}>
       <section className={styles.centered}>
@@ -35,20 +33,18 @@ export default async function Home() {
           <h2 className={styles.subtitle}><Subtitle/></h2>
         </div>
       </section>
-      <section className={styles.centered_column}>
-        <h2 className={styles.projects_title}>About me</h2>
-        <div className={styles.pink_bordered}>
-          <Image
-            className={styles.logo_about}
-            src="About/Head.svg"
-            width={300}
-            height={300}
-          />
+      <section className={styles.centered_title}>
+        <h2 className={styles.about_title_desktop}>About me</h2>
+        <div className={styles.inner_centered_title}>
+          <Image className={styles.logo_about} src="About/Head.svg" width={500} height={500}/>
+          <h2 className={styles.about_title_mobile}>About me</h2>
+
+          <div className={styles.pink_bordered}>
             <div>
               <p className={roboto_mono.className}>
-                I'm <b className={styles.pink_text}>Rodrigo Seguel</b>, a <b className={styles.pink_text}>Software Developer</b> with a love for both web and game development. Constantly exploring new technologies and pushing myself to learn more.
-              </p>
+                I'm <b className={styles.pink_text}>Rodrigo Seguel</b>, a <b className={styles.pink_text}>Software Developer</b> with a love for both web and game development. Constantly exploring new technologies and pushing myself to learn more.              </p>
             </div>
+          </div>
         </div>
       </section>
       <section className={styles.centered_column}>
