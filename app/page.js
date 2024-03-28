@@ -5,6 +5,7 @@ import ProjectButton from "./components/project_button"
 import Subtitle from "./components/subtitle"
 import CustomFooter from "./components/footer"
 import ExperienceButton from "./components/experience"
+import InTransition from "./components/in"
 import { Client } from "@notionhq/client";
 
 
@@ -27,6 +28,7 @@ export default async function Home() {
 
   return (
     <main className={styles.background}>
+      <InTransition/>
       <section className={styles.centered_first}>
         <div className={styles.centered_column}>
           <h1 className={styles.title}>Rodrigo Seguel</h1>

@@ -55,7 +55,7 @@
   font-size: min(6vh, 110px);
   font-weight: 400;
   margin-bottom: -0.3em;
-
+  transition: 0.3s;
 }
 
 .subtitle {
@@ -424,11 +424,32 @@
 }
 
 .back {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
 }
 
+.transition {
+  position: fixed;
+  background-color: #DC486A;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.3s;
+}
+
+.subtitle_transition {
+  font-size: min(3vh, 50px);
+  font-weight: 400;
+  text-align: center;
+  transition: 0.4s;
+  color: #15161C;
+  transition: 0.3s;
+}
 
 @media (max-width: 900px) {
   .exp_background {
@@ -523,3 +544,4 @@
     z-index: 100;
   }
 }
+

@@ -1,4 +1,5 @@
 import { Oswald } from "next/font/google";
+import InTransition from "./components/in"
 import "./globals.css";
 
 const oswald = Oswald({

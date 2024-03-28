@@ -1,6 +1,7 @@
 import styles from "../page.module.css";
 import ProjectButton from "../components/project_button"
 import CustomFooter from "../components/footer"
+import InTransition from "../components/in"
 import { Client } from "@notionhq/client";
 import Link from "next/link";
 import Image from "next/image";
@@ -24,6 +25,7 @@ export default async function Home() {
 
   return (
     <main className={styles.background}>
+      <InTransition/>
       <div className={styles.centered_column_proj}>
         <Link href={`/`}>
             <Image

@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import InTransition from "../../components/in"
 
 import { Client } from "@notionhq/client";
 import { Roboto_Mono, Roboto } from "next/font/google";
@@ -44,6 +45,7 @@ async function Project({ params }) {
 
   return (
     <div className={styles.background}>
+      <InTransition/>
       <Link href={`/`}>
         <Image
           src={"/icons/Back.svg"}
