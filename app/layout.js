@@ -1,4 +1,5 @@
 import { Oswald } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react"
 import InTransition from "./components/in"
 import "./globals.css";
 
