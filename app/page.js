@@ -110,7 +110,7 @@ const loadProj = async (notion) => {
           gif: get_plain(element.properties.gif)
         }
 
-        projects.push(<ProjectButton data={data}/>)
+        projects.push(<ProjectButton home={true} data={data}/>)
       }
     } catch (error) {
       projects.push(<>upsi</>)

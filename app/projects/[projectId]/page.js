@@ -2,7 +2,7 @@ import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import InTransition from "../../components/in"
-
+import { useSearchParams } from 'next/navigation'
 import { Client } from "@notionhq/client";
 import { Roboto_Mono, Roboto } from "next/font/google";
 
@@ -16,7 +16,7 @@ const roboto = Roboto({
   weight: ['100','400', '700']
 })
 
-async function Project({ params }) {
+async function Project({ params, searchParams }) {
   const notion = new Client({
     auth: process.env.NOTION_KEY
   })
@@ -43,10 +43,13 @@ async function Project({ params }) {
 
   const techs = project.properties.technologies.multi_select ? loadTechs(project.properties.technologies.multi_select) : null
 
+  console.log(searchParams)
+  let link = searchParams.h == 1 ? '/projects' : '/'
+
   return (
     <div className={styles.background}>
       <InTransition/>
-      <Link href={`/`}>
+      <Link href={link}>
         <Image
           src={"/icons/Back.svg"}
           width={80}

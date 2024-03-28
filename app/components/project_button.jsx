@@ -43,7 +43,7 @@ const ProjectButton = (props) => {
 
   return (
     <div key={data.id} className={main_div_class} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} style={{ backgroundImage: hovered ? `url('${data.gif}')` : 'none'}}>
-        <Link href={`/projects/${encodeURIComponent(data.id)}`}>
+        <Link href={`/projects/${encodeURIComponent(data.id)}` + (!props.home ? '?h=1' : '')}>
         <div className={styles.over}>
           <div className={styles.project_title}>{data.title}</div>
           <p className={styles.project_paragraph}>{texts}</p>
