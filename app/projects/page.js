@@ -19,10 +19,6 @@ const roboto = Roboto({
 })
 
 export default async function Home() {
-  const notion = new Client({
-    auth: process.env.NOTION_KEY
-  })
-
   return (
     <main className={styles.background}>
       <InTransition/>
@@ -37,7 +33,7 @@ export default async function Home() {
         </Link>
         <div className={styles.exp_title_background}><h2 className={styles.projects_title}>Projects</h2></div>
         <div className={styles.projects_background}>
-          {await loadProj(notion)}
+          {await loadProj()}
         </div>
       </div>
       <CustomFooter/>
@@ -45,29 +41,41 @@ export default async function Home() {
   );
 }
 
-const loadProj = async (notion) => {
-  const databaseProjects = await notion.databases.query({
-    database_id: process.env.DATABASE_PROJ_ID,
-  })
+const loadProj = async () => {
+  try {
+    const notion = new Client({
+      auth: process.env.NOTION_KEY
+    })
 
-  let projects = []
+    const databaseProjects = await notion.databases.query({
+      database_id: process.env.DATABASE_PROJ_ID,
+    })
 
-  databaseProjects.results.forEach((element, index) => {
-    try {
-        let data = {
-          id: element.properties.ID.unique_id.number,
-          title: element.properties.title.title[0].plain_text,
-          paragraph: get_plain(element.properties.description),
-          technologies: element.properties.technologies.multi_select,
-          gif: get_plain(element.properties.gif)
-        }
+    let projects = []
 
-        projects.push(<ProjectButton home={false} data={data}/>)
-    } catch (error) {
-      projects.push(<>upsi</>)
-    }
-  });
-  return projects;
+    databaseProjects.results.forEach((element, index) => {
+      try {
+          let data = {
+            id: element.properties.ID.unique_id.number,
+            title: element.properties.title.title[0].plain_text,
+            paragraph: get_plain(element.properties.description),
+            technologies: element.properties.technologies.multi_select,
+            gif: get_plain(element.properties.gif)
+          }
+
+          projects.push(<ProjectButton home={false} data={data}/>)
+      } catch (error) {
+        projects.push(<>upsi</>)
+      }
+    });
+    return projects;
+  } catch (e) {
+    return <>
+      <p className={roboto_mono.className + ' ' + styles.centered}>
+        The projects list did not loaded correctly
+      </p>
+    </>
+  }
 }
 
 const get_plain = (property) => {
